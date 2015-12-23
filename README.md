@@ -1,0 +1,113 @@
+# yarn
+
+**WIP. The following README does not reflect the current state of the
+repository**
+
+"**Y**acine's **a**wesome **r**epository of **N**ix expressions"
+is where I store the configuration of my NixOS devices.
+As I have several of them, and some custom packages and modules, I came up
+with this small framework so the maintenance stays as painless as possible.
+
+As such, yarn is both a repository of packages, modules, and configurations
+that may interest you, *and* a framework that you can reuse for your own
+machines.
+
+If you don't know NixOS, make yourself a favor: use it. The pain of system
+management will go away. It starts with the [website](https://nixos.org).
+
+## Workflow
+
+To use yarn as I do, you must have NixOS 15.09 installed.
+It is also preferable to subscribe to the unstable channel as none other
+has been tested.
+
+The steps to follow:
+
+1. Fork the repo so you can push into it later.
+2. Clone your fork wherever you want.
+3. Write a custom device module in the `devices` folder and add its path
+to `devices/all-devices.nix`.
+4. Import in your top-level configuration module the following
+module `(import /path/to/yarn/repo "device-name")`.
+5. Type `nixos-rebuild switch` in your terminal and you're set.
+
+Repeat the steps 2 to 5 for each new device. The top-level configuration module
+mentionned in step 4 should be in `/etc/nixos/configuration.nix` if you kept
+the default `nix-config`. There is an example file in the root of the repo.
+
+Add custom modules and packages in their respective folders and top-level
+nix files. They will be shared among all of your devices once you push
+your changes.
+
+The `master` branch is the one I currently use for my devices, so you can
+use this as a working example. Alternatively, you can create a new branch
+from the `skeleton` branch if you want a blank slate.
+
+I advise you to share common configuration of several devices through a
+*profile*, which is just a fancy name for a module that will get imported.
+You can put it in `devices/profiles`.
+
+## Rationale
+
+I have three good reasons to adopt this workflow.
+
+1. NixOS allows seamless rollbacks if something breaks,
+but it doesn't save the corresponding Nix expressions.
+With yarn, I type `git reset` whenever I mess up.
+2. If I need to setup a new device with my favourite applications and a
+tailored environment, it is done in a matter of minutes (if not seconds when
+cutting waiting time).
+3. Configuration in all my devices stay consistent. This is like cloning
+your dotfiles but at a much larger scale ; litteraly the whole system.
+
+### Why not fork nixpkgs?
+
+I do fork nixpkgs. However I prefer this setup for packaging standalone
+software and writing custom NixOS modules because editing the whole tree
+is cumbersome.
+
+When editing nixpkgs, you need to make sure you stay in sync with the channels
+(in order to get the binaries) *and* the remote master tree (because it's where
+the new expressions eventually get merged). It's not very hard as you just
+have to branch and rebase, but it gets quickly tiring.
+
+Also, nixpkgs is a behemoth: opening
+`<nixpkgs/pkgs/top-level/all-packages.nix>` takes ages and the tree,
+although fairly well organized, goes quite deep. This hampers navigation in
+the command line.
+
+To use your custom tree you need to overwrite the default one in `NIX_PATH`.
+You still have access to the channel's binaries if you're in sync but you lose
+`nix-env -qaP` and `command-not-found`. I like those.
+
+I use my own nixpkgs tree when I need to quickly hack into existing
+expressions or if I need to push anything upstream. For everything else, yarn
+does the job better.
+
+## What does yarn do?
+
+If you mean the framework, by itself not much. It only:
+
+- merges `pkgs` and the set returned by `packages/all-packages.nix` through
+`nixpkgs.config.packageOverrides`; this means you cannot use this attribute
+yourself
+- imports the modules in the list returned by `modules/module-list.nix`
+- fetches the set returned by `devices/all-devices.nix` containing paths
+to modules and imports the attribute that has the same name as the one passed
+as parameter (i.e. `deviceName`) ; this is because yarn is actually a closure
+that takes the name of a device and returns a module for that device.
+
+You can read `default.nix` and `packages/default.nix` to better understand
+what happens under the cover. You will see that `yarn` is very very tiny.
+It shows how powerful Nix is.
+
+## My configuration
+
+As of the current commit, there is nothing in the repository.
+
+## Licencing
+
+I sometimes unshamedly copy-paste whole parts of Nix expressions from
+`nixpkgs`, which is under the MIT licence. I am legally obligated to mention
+this. As a convenience, I license my work under the same MIT license. See the
+notice.
