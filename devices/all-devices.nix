@@ -4,5 +4,9 @@
 lib:
 
 {
-
+  # My home workstation.
+  nicoletta = ./nicoletta;
+ 
+  # My slick ultrabook.
+  bobdoge = ./bobdoge;
 }
