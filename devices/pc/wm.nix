@@ -5,6 +5,9 @@
     # For i3
     i3status
     dmenu
+
+    # Wayland
+    sway
     
     # Theming
     gtk-engine-murrine

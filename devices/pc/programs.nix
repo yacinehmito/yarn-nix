@@ -24,7 +24,7 @@
 
     # Xorg
     xsel
-
+    
     # Music
     beets
     mpd
