@@ -2,5 +2,9 @@
 # The value of the attribute is the path to the corresponding module.
 # Profiles should not belong to this set.
 {
-
+  # My home workstation.
+  nicoletta = ./nicoletta;
+ 
+  # My slick ultrabook.
+  bobdoge = ./bobdoge;
 }
