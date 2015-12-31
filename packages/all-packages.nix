@@ -7,5 +7,7 @@ with pkgs;
 # They will be added to `pkgs` or override the existing ones.
 # Of course, packages can depend on each other, as long as there is no cycle.
 rec {
-
+  # SirCmpwn's Wayland window manager and Cloudef's library wlc
+  sway = callPackage ./sway { };
+  wlc = callPackage ./wlc { };
 }

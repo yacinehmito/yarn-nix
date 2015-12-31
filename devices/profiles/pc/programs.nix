@@ -29,6 +29,9 @@
 
     # Xorg
     xsel
+    
+    # Wayland
+    sway
 
     # Music
     beets

@@ -1,8 +1,5 @@
 # yarn
 
-**WIP. The following README does not reflect the current state of the
-repository**
-
 "**Y**acine's **a**wesome **r**epository of **N**ix expressions"
 is where I store the configuration of my NixOS devices.
 As I have several of them, and some custom packages and modules, I came up
@@ -103,7 +100,11 @@ It shows how powerful Nix is.
 
 ## My configuration
 
-As of the current commit, there is only the yarn framework in the repository.
+In this repository, you will not only find the framework but also, as of the
+current commit:
+
+- Packaging for sway, a tiling window manager for Wayland, and its library wlc
+- The configurations of my desktop and my laptop
 
 ## Licencing
 
