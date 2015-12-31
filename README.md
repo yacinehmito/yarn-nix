@@ -103,7 +103,7 @@ It shows how powerful Nix is.
 
 ## My configuration
 
-As of the current commit, there is nothing in the repository.
+As of the current commit, there is only the yarn framework in the repository.
 
 ## Licencing
 
