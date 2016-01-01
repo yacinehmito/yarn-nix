@@ -39,17 +39,15 @@
 
   # Set time zone
   time.timeZone = "Europe/Paris";
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.desktopManager.xterm.enable = false;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.windowManager.i3.enable = true;
+  
+  services.sway.enable = true;
+  services.sway.terminal = "2";
+  services.sway.user = "gpyh";
 
   # Keyboard layout
   i18n.consoleKeyMap = "fr";
-  services.xserver.layout = "fr";
-  services.xserver.xkbOptions = "eurosign:e";
+  # services.xserver.layout = "fr";
+  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
