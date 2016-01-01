@@ -58,7 +58,7 @@
     idea.idea-community
 
     # Browsers
-    firefox
+    firefox-wrapper
     chromium
 
     # Pdf
