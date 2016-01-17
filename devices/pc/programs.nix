@@ -47,6 +47,7 @@
 
     # Editors & IDEs
     neovim
+    idea.idea-community
 
     # Browsers
     firefox
