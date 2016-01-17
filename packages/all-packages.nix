@@ -10,4 +10,10 @@ rec {
   # SirCmpwn's Wayland window manager and Cloudef's library wlc
   sway = callPackage ./sway { };
   wlc = callPackage ./wlc { };
+
+  idea = lib.mapAttrs
+    (name: value: value.override {
+      oraclejdk8 = openjdk8;
+    }) 
+    (pkgs.idea);
 }
