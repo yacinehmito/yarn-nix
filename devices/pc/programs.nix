@@ -56,11 +56,12 @@
     # Pdf
     zathura
 
-    # Languages
+    # Dev
     nodejs
     openjdk
     gcc
     clang
+    androidenv.androidsdk_6_0_extras
 
     # Build tools
     gradle
