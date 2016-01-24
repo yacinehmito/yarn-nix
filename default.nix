@@ -12,21 +12,20 @@ let
 
     {
       imports = [
-        # Importing the packages module that will override pkgs...
-        ({
-          nixpkgs.config = {
-            packageOverrides = (import ./packages/all-packages.nix) lib;
-          };
-        })
         # ...the device module holding the system configuration...
         devicePath
       ] ++ (import ./modules/module-list.nix) lib; # ...and all the extra modules.
-    };
-in
+      nixpkgs.config = {
+        packageOverrides = (import ./pkgs/all-packages.nix) lib;
+      };
 
-{
-  devices = lib.mapAttrs 
+      nix.nixPath = [
+        (lib.concatStrings [ "yarnpkgs=" (./.) "/pkgs/yarnpkgs.nix" ])
+      ];
+    };
+  deviceModules = lib.mapAttrs
     (name: value: makeDevice value)
     ((import ./devices/all-devices.nix) lib);
-}
+in
 
+deviceModules
