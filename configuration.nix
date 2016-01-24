@@ -10,7 +10,7 @@ in
 {
   imports = [
     # My device
-    yarn.devices.nicoletta
+    yarn.nicoletta
   ];
   
   nix.nixPath = [
