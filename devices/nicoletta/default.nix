@@ -12,7 +12,7 @@
   boot.kernelModules = [ "kvm-intel radeon" ];
   boot.extraModulePackages = [ ];
 
-  environment.systemPackages = [ pkgs.xorg.xf86videoati ];
+  environment.systemPackages = [ pkgs.xorg.xf86videoati pkgs.ntfs3g ];
 
   swapDevices = [ ];
 
