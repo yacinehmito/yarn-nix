@@ -39,15 +39,11 @@
     curl
     wget
 
-    # Block devices
-    ntfs3g
-
     # Terminal emulation
     termite
 
-    # Editors & IDEs
+    # Editors
     neovim
-    idea.idea-community
 
     # Browsers
     firefox-wrapper
@@ -55,18 +51,6 @@
 
     # Pdf
     zathura
-
-    # Dev
-    nodejs
-    openjdk
-    gcc
-    clang
-    androidenv.androidsdk_6_0_extras
-
-    # Build tools
-    gradle
-    gnumake
-    cmake
 
     # IRC
     weechat
