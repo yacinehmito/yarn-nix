@@ -4,6 +4,17 @@
 {
   programs.zsh.enable = true;
 
+  # Flash
+  nixpkgs.config = {
+    allowUnfree = true;
+    firefox = {
+      enableAdobeFlash = true;
+    };
+    chromium = {
+      enablePepperFlash = true;
+    };
+  };
+
   environment.systemPackages = with pkgs ; [
     # Compression
     zip
