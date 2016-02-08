@@ -19,6 +19,8 @@ let
       oraclejdk8 = openjdk8;
     }) 
     (pkgs.idea);
+
+  asciidoctor = callPackage ./asciidoctor { };
 };
 
 in yarnpkgs
