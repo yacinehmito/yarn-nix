@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    asciidoctor (1.5.4)
+    asciidoctor-bespoke (1.0.0.alpha.1)
+      asciidoctor (>= 1.5.0)
+      slim (~> 3.0.6)
+      thread_safe (~> 0.3.5)
+    asciidoctor-diagram (1.4.0)
+      asciidoctor (~> 1.5.0)
+    slim (3.0.6)
+      temple (~> 0.7.3)
+      tilt (>= 1.3.3, < 2.1)
+    temple (0.7.6)
+    thread_safe (0.3.5)
+    tilt (2.0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  asciidoctor
+  asciidoctor-bespoke
+  asciidoctor-diagram
+
+BUNDLED WITH
+   1.11.2
