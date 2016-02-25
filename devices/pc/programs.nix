@@ -15,6 +15,7 @@
     };
   };
 
+
   environment.systemPackages = with pkgs ; [
     asciidoctor
     # Compression
@@ -24,6 +25,9 @@
     # CLI utilies
     pstree
     silver-searcher
+    jq
+    go-pup
+    ghostscript
 
     # Nix helpers
     nix-prefetch-scripts
