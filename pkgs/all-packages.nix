@@ -10,6 +10,7 @@ let
   callPackage = pkgs.lib.callPackageWith (pkgs // pkgs.xlibs // yarnpkgs);
   yarnpkgs = rec
 {
+  libinput = callPackage ./libinput { };
   # SirCmpwn's Wayland window manager and Cloudef's library wlc
   wlc = callPackage ./wlc { };
   sway = callPackage ./sway { };
