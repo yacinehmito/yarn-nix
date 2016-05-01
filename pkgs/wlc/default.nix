@@ -5,14 +5,14 @@
 # TODO: Handle optional dependencies
 # TODO: Debug build & tests
 stdenv.mkDerivation rec {
-  version = "2016-02-25";
+  version = "2016-05-01";
   name = "wlc-${version}";
   
   src = fetchgit {
     # TODO: patch upstream to remove weak linking (use fork in the meantime)
     url = "https://github.com/gpyh/wlc.git";
-    rev = "1e0e208c82f9b381ca0305f6bad8d024e2601d4d";
-    sha256 = "066q9cahl13l5qkqkg9vy1zqxrh2kcx1ilkxm5rcwfi6m9ash1q2";
+    rev = "bc05294aa970fa23fe9ef4c281b4b12a83613d39";
+    sha256 = "15njy42j0c6aqmy5ldzikdr9xkcg3q0w8wir41z5wp3jrkyr736m";
     fetchSubmodules = true;
   };
 

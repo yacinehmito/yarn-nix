@@ -1,21 +1,20 @@
 { stdenv, fetchFromGitHub
 , cmake, pkgconfig, asciidoc
 , wlc, wayland, xwayland, pcre, json_c, libxkbcommon, libinput
-# sway utils enables swaybar, swaybg and swaylock
+# swayutils enables swaybar, swaybg and swaylock
 , swayutils ? true
 , pango, cairo, gdk_pixbuf, pam, imagemagick, ffmpeg
 }:
 
-#TODO: Debug build
 stdenv.mkDerivation rec {
-  version = "2016-02-25";
   name = "sway-${version}";
+  version = "0.6";
   
   src = fetchFromGitHub {
     owner = "SirCmpwn";
     repo = "sway";
-    rev = "28c8e4fb9e6da839d353be723be60bb7bf2ebcdb";
-    sha256 = "1170p6jx5r98ckiv98iqngia7w3wwivxkpd5b9j6xx6v47gm67qh";
+    rev = version;
+    sha256 = "0545jkf191ks9ppb4hxib6vw9i62x9xvx18jd241k1spnixmscsw";
   };
 
   preConfigure = ''
