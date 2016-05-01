@@ -21,6 +21,14 @@ let
     (pkgs.idea);
 
   asciidoctor = callPackage ./asciidoctor { };
+
+  mesa_drivers = mesaDarwinOr (
+    let mo = mesa_noglu.override {
+      enableTextureFloats = true;
+      llvmPackages = llvmPackages_36; # various problems with 3.7; see #11367, #11467
+    };
+    in mo.drivers
+  );
 };
 
 in yarnpkgs
