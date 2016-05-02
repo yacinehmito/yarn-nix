@@ -2,7 +2,7 @@
 
 bundlerEnv rec {
   name = "asciidoctor-${version}";
-  version = "0.1";
+  version = "1.5.4";
 
   ruby = ruby_2_2;
   gemfile = ./Gemfile;
@@ -11,7 +11,9 @@ bundlerEnv rec {
 
   meta = with lib; {
     description = "Asciidoctor";
+    homepage = http://asciidoctor.org/;
     license = licenses.mit;
+    #maintainers = with maintainers; [ gpyh ];
     platforms = platforms.unix;
   };
 }
