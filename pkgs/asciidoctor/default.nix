@@ -8,6 +8,11 @@ bundlerEnv rec {
   gemfile = ./Gemfile;
   lockfile = ./Gemfile.lock;
   gemset = ./gemset.nix;
+  
+  postBuild = ''
+    find $out/bin -type f -not -wholename '*bin/asciidoctor*' -print0 \
+    | xargs -0 rm
+  '';
 
   meta = with lib; {
     description = "Asciidoctor";
