@@ -17,17 +17,22 @@
 
 
   environment.systemPackages = with pkgs ; [
-    asciidoctor
-    # Compression
-    zip
-    unzip
+
+    # C and Unix stuff
+    stdenv
 
     # CLI utilies
-    pstree
-    silver-searcher
-    jq
-    go-pup
-    ghostscript
+    zip unzip
+    pstree # See processes
+    htop # Monitor ressources
+    silver-searcher # Search pattern in source code (ag)
+    jq # JSON processor
+    go-pup # HTML processor (pup)
+    ghostscript # PS/PDF processor
+
+    # Document authoring
+    asciidoctor
+    xelatex
 
     # Nix helpers
     nix-prefetch-scripts
@@ -74,5 +79,11 @@
     # Graphics
     inkscape
     graphviz
+
+    # Runtimes
+    openjdk8
+    nodejs-5_x
+    python3
+    R
   ];
 }
