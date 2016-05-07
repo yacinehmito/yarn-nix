@@ -29,6 +29,16 @@ let
     };
     in mo.drivers
   );
+  
+  mpv = pkgs.mpv.override {
+    vaapiSupport = true;
+    waylandSupport = true;
+  };
+
+  xelatex = texlive.combine {
+    # FIXME: No xelatex for now because Nix derivations seem out of date
+    inherit (texlive) scheme-medium;
+  };
 };
 
 in yarnpkgs
