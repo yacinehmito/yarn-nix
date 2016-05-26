@@ -21,18 +21,22 @@ let
 
   asciidoctor = callPackage ./asciidoctor { };
 
-  mesa_drivers = mesaDarwinOr (
-    let mo = mesa_noglu.override {
-      enableTextureFloats = true;
-      llvmPackages = llvmPackages_36; # various problems with 3.7; see #11367, #11467
-    };
-    in mo.drivers
-  );
+  libwebsockets-master = callPackage ./libwebsockets { };
   
-  mpv = pkgs.mpv.override {
-    vaapiSupport = true;
-    waylandSupport = true;
-  };
+  # idrisPackages = import ./idris-packages pkgs.idrisPackages;
+
+  # mesa_drivers = mesaDarwinOr (
+  #   let mo = mesa_noglu.override {
+  #     enableTextureFloats = true;
+  #     llvmPackages = llvmPackages_36; # various problems with 3.7; see #11367, #11467
+  #   };
+  #   in mo.drivers
+  # );
+  
+  # mpv = pkgs.mpv.override {
+  #   vaapiSupport = true;
+  #   waylandSupport = true;
+  # };
 
   xelatex = texlive.combine {
     # FIXME: No xelatex for now because Nix derivations seem out of date

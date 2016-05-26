@@ -44,6 +44,4 @@
     };
   };
 
-  services.xserver.videoDrivers = [ "ati" ];
-
 }

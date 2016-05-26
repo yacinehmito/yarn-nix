@@ -7,11 +7,14 @@
     dmenu
 
     # Wayland
-    sway
+    # sway
     
     # Theming
     gtk-engine-murrine
     numix-gtk-theme
+
+    # Clipboard utility
+    xsel
   ];
   
   environment.variables = {

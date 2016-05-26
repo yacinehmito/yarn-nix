@@ -17,9 +17,9 @@
 
 
   environment.systemPackages = with pkgs ; [
-
-    # C and Unix stuff
-    stdenv
+    idrisPackages.posix
+    idrisPackages.argparse
+    libwebsockets-master
 
     # CLI utilies
     zip unzip
@@ -29,10 +29,14 @@
     jq # JSON processor
     go-pup # HTML processor (pup)
     ghostscript # PS/PDF processor
+    gnumake # Make
+
+    # Image viewer
+    imv
 
     # Document authoring
     asciidoctor
-    xelatex
+    # xelatex
 
     # Nix helpers
     nix-prefetch-scripts
@@ -42,14 +46,11 @@
 
     # Version control
     git
-
-    # Xorg
-    xsel
     
     # Music
     beets
-    mpd
-    ncmpcpp
+    # mpd
+    # ncmpcpp
 
     # Media
     mpv
@@ -67,7 +68,7 @@
     neovim
 
     # Browsers
-    firefox-wrapper
+    # firefox-wrapper
     chromium
 
     # Pdf
@@ -77,11 +78,11 @@
     weechat
 
     # Graphics
-    inkscape
+    # inkscape
     graphviz
 
-    # Runtimes
-    openjdk8
+    # Runtimes/Compilers
+    # openjdk8
     nodejs-5_x
     python3
     R
