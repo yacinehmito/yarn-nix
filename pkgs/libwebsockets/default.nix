@@ -1,15 +1,22 @@
-{ fetchgit, stdenv, cmake, openssl, zlib }:
+{ fetchgit, stdenv, cmake, openssl, zlib, libuv, sqlite }:
 
 stdenv.mkDerivation rec {
   name = "libwebsockets-master";
 
   src = fetchgit {
     url = "https://github.com/warmcat/libwebsockets.git";
-    rev = "822b3f6b2d762abe07ae6d058dd5ccd98155d273";
-    sha256 = "12ify3wcssmlkcv59h1is39sqysdvsdx33w3xbbnf3db2dy4drq4";
+    rev = "55333db942d61da7296c28fff1999104020e0a40";
+    sha256 = "1vjiqrrd5x2cfl6zvdh65h9fiz4062y5ghdjvj6p950hscqdyw6b";
   };
 
-  buildInputs = [ cmake openssl zlib ];
+  preConfigure = ''
+    export cmakeFlags="$cmakeFlags \
+      -DLWS_WITHOUT_DAEMONIZE=OFF -DLWS_WITH_PLUGINS=ON -DLWS_WITH_LWSWS=1"
+  '';
+
+  buildInputs = [ openssl zlib libuv sqlite ];
+
+  nativeBuildInputs = [ cmake ];
 
   meta = {
     description = "Light, portable C library for websockets";

@@ -17,8 +17,8 @@
 
 
   environment.systemPackages = with pkgs ; [
+    # idrisPackages.argparse
     idrisPackages.posix
-    idrisPackages.argparse
     libwebsockets-master
 
     # CLI utilies
@@ -57,7 +57,7 @@
     pavucontrol
 
     # Downloads
-    transmission
+    # transmission
     curl
     wget
 
