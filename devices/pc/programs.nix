@@ -61,7 +61,7 @@
     graphviz
 
     # Runtimes
-    idris
+    # idris
     nodejs-5_x
     python3
     R
