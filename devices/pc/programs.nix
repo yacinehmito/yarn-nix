@@ -6,9 +6,6 @@
 
   environment.systemPackages = with pkgs ; [
 
-    # C and Unix stuff
-    stdenv
-
     # CLI utilies
     zip unzip
     pstree # See processes
@@ -17,9 +14,10 @@
     jq # JSON processor
     go-pup # HTML processor (pup)
     ghostscript # PS/PDF processor
+    gnumake # Make
 
     # Document authoring
-    xelatex
+    asciidoctor
 
     # Nix helpers
     nix-prefetch-scripts
@@ -30,17 +28,15 @@
     # Version control
     git
 
-    # Music
+    # Media
     beets
     mpd
     ncmpcpp
-
-    # Media
     mpv
     pavucontrol
 
     # Downloads
-    transmission
+    # transmission
     curl
     wget
 
@@ -65,7 +61,7 @@
     graphviz
 
     # Runtimes
-    openjdk8
+    idris
     nodejs-5_x
     python3
     R
