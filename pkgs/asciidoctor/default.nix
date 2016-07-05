@@ -1,4 +1,4 @@
-{ stdenv, lib, bundlerEnv, ruby_2_2, curl }:
+{ stdenv, lib, bundlerEnv, ruby_2_2, curl, zlib }:
 
 bundlerEnv rec {
   name = "asciidoctor-${version}";
@@ -21,4 +21,6 @@ bundlerEnv rec {
     #maintainers = with maintainers; [ gpyh ];
     platforms = platforms.unix;
   };
+
+  buildInputs = [ zlib ];
 }

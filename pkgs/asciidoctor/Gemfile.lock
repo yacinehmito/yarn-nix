@@ -9,9 +9,9 @@ GEM
       asciidoctor (>= 1.5.0)
       slim (~> 3.0.6)
       thread_safe (~> 0.3.5)
-    asciidoctor-diagram (1.4.0)
+    asciidoctor-diagram (1.5.0)
       asciidoctor (~> 1.5.0)
-    asciidoctor-latex (1.5.0.6.dev)
+    asciidoctor-latex (1.5.0.16.dev)
       asciidoctor (~> 1.5, >= 1.5.2)
       htmlentities (~> 4.3)
       opal (~> 0.6.3)
@@ -25,12 +25,12 @@ GEM
       safe_yaml (~> 1.0.4)
       thread_safe (~> 0.3.5)
       treetop (= 1.5.3)
-    concurrent-ruby (1.0.1)
-    css_parser (1.4.1)
+    concurrent-ruby (1.0.2)
+    css_parser (1.4.5)
       addressable
     hashery (2.1.2)
     htmlentities (4.3.4)
-    json (1.8.3)
+    json (2.0.0)
     opal (0.6.3)
       source_map
       sprockets
@@ -55,20 +55,20 @@ GEM
     prawn-templates (0.0.3)
       pdf-reader (~> 1.3)
       prawn (>= 0.15.0)
-    rack (1.6.4)
+    rack (2.0.1)
     ruby-rc4 (0.1.5)
     safe_yaml (1.0.4)
-    slim (3.0.6)
-      temple (~> 0.7.3)
+    slim (3.0.7)
+      temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
     source_map (3.0.1)
       json
-    sprockets (3.6.0)
+    sprockets (3.6.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
-    temple (0.7.6)
+    temple (0.7.7)
     thread_safe (0.3.5)
-    tilt (2.0.2)
+    tilt (2.0.5)
     treetop (1.5.3)
       polyglot (~> 0.3)
     ttfunk (1.4.0)
@@ -84,4 +84,4 @@ DEPENDENCIES
   asciidoctor-pdf
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
