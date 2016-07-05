@@ -1,8 +1,6 @@
 # # !!! This file belongs to the yarn framework. !!!
 # # !!! Do not change unless you know what you're doing. !!!
 
-lib:
-
 let
   # This function takes the path of a device module as an argument
   # and returns a complete module to be imported in configuration.nix
@@ -15,17 +13,26 @@ let
         # ...the device module holding the system configuration...
         devicePath
       ] ++ (import ./modules/module-list.nix) lib; # ...and all the extra modules.
+
       nixpkgs.config = {
         packageOverrides = (import ./pkgs/all-packages.nix) lib;
       };
 
       nix.nixPath = [
-        (lib.concatStrings [ "yarnpkgs=" (./.) "/pkgs/yarnpkgs.nix" ])
+        # Where to get the top-level nix file, i.e. this one
+        "nixos-config=/etc/nixos/configuration.nix"
+        # The channel to be subscribed on
+        "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
       ];
+      
+      system.stateVersion = "15.09";
+
     };
-  deviceModules = lib.mapAttrs
-    (name: value: makeDevice value)
-    ((import ./devices/all-devices.nix) lib);
+  deviceModules =
+    builtins.listToAttrs (map (deviceName: {
+      name = deviceName;
+      value = makeDevice (./devices + "/${deviceName}");
+    }) (import ./devices/all-devices.nix));
 in
 
 deviceModules
