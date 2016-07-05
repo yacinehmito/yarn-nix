@@ -12,6 +12,9 @@
       unifont
       gyre-fonts
       xits-math
+      lmodern
+      lmmath
+      dejavu_fonts
     ];
   };
 }
