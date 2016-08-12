@@ -9,7 +9,7 @@
   networking.hostName = "nicoletta";
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "usbhid" ];
-  boot.kernelModules = [ "kvm-intel radeon" ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   environment.systemPackages = [ pkgs.ntfs3g ];
@@ -44,6 +44,8 @@
     };
   };
 
-  services.xserver.videoDrivers = [ "ati" ];
-
+  # Nvidia drivers
+  nixpkgs.config.allowUnfree = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.opengl.driSupport32Bit = true; 
 }
