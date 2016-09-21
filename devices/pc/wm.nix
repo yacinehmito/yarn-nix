@@ -5,6 +5,7 @@
     # For i3
     i3status
     dmenu
+    xclip
 
     # Theming
     gtk-engine-murrine
