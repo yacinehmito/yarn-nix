@@ -19,7 +19,6 @@
     ghostscript # PS/PDF processor
 
     # Document authoring
-    asciidoctor
     xelatex
 
     # Nix helpers
