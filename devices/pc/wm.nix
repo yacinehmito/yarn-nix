@@ -6,9 +6,6 @@
     i3status
     dmenu
 
-    # Wayland
-    sway
-    
     # Theming
     gtk-engine-murrine
     numix-gtk-theme
