@@ -3,7 +3,7 @@
     kernelParams = [ "quit loglevel=3 vga=current"];
 
     loader = {
-      gummiboot.enable = true;
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
   };
