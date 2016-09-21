@@ -10,6 +10,8 @@
       inconsolata
       ubuntu_font_family
       unifont
+      gyre-fonts
+      xits-math
     ];
   };
 }
