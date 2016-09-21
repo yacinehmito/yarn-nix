@@ -3,7 +3,10 @@
 {
 
   environment.systemPackages = [ 
-    (pkgs.steam.override { newStdcpp = true; })
+    (pkgs.steam.override {
+      newStdcpp = true;
+      withJava = true;
+    })
   ];
   nixpkgs.config.allowUnfree = true;
 
