@@ -31,9 +31,6 @@
     # Version control
     git
 
-    # Xorg
-    xsel
-    
     # Music
     beets
     mpd
