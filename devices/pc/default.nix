@@ -3,10 +3,10 @@
 
 {
   imports = [
+    ./zsh
     ./programs.nix
     ./fonts.nix
     ./gpyh.nix
-    ./steam.nix
     ./keyboard.nix
     ./wm.nix
     ./boot.nix

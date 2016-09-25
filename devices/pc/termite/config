@@ -1,0 +1,27 @@
+[options]
+    font = Inconsolata for Powerline 22
+    clickable_url = true
+    allow_bold = true
+    cursor_shape = block
+    cursor_blink = off
+    browser = qutebrowser
+
+[colors]
+    foreground = #eeeeee
+    background = #282828
+    color0 = #282828
+    color1 = #c5152f
+    color2 = #9faa00
+    color3 = #ffc24b
+    color4 = #73cef4
+    color5 = #c5158f
+    color6 = #335261
+    color7 = #999999
+    color8 = #666666
+    color9 = #f43753
+    color10 = #c9d05c
+    color11 = #ffdf5f
+    color12 = #b3deef
+    color13 = #f437a3
+    color14 = #44778d
+    color15 = #eeeeee

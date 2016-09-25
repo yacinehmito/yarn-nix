@@ -2,6 +2,8 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
+
   fonts = {
     enableFontDir = true;
     enableGhostscriptFonts = true;
@@ -18,4 +20,3 @@
     ];
   };
 }
-

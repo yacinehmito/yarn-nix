@@ -2,6 +2,7 @@
 { config, pkgs, ... }:
 
 {
+
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs ; [
@@ -15,6 +16,7 @@
     go-pup # HTML processor (pup)
     ghostscript # PS/PDF processor
     gnumake # Make
+    file # Guess the type
 
     # Document authoring
     asciidoctor
@@ -35,16 +37,16 @@
     mpv
     pavucontrol
 
+    # Editors
+    (callPackage ./neovim { })
+
     # Downloads
     # transmission
     curl
     wget
 
     # Terminal emulation
-    termite
-
-    # Editors
-    neovim
+    (callPackage ./termite { })
 
     # Browsers
     firefox
