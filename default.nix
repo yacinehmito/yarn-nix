@@ -22,7 +22,7 @@ let
         # Where to get the top-level nix file, i.e. this one
         "nixos-config=/etc/nixos/configuration.nix"
         # The channel to be subscribed on
-        "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+        "nixpkgs=/home/gpyh/nixpkgs"
       ];
       
       system.stateVersion = "15.09";
