@@ -34,5 +34,8 @@
   services.acpid.enable = true;
   powerManagement.enable = true;
 
+  services.xserver.dpi = 221;
+  fonts.fontconfig.dpi = 221;
+
   nix.maxJobs = 4;
 }

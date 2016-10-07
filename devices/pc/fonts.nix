@@ -11,12 +11,21 @@
       corefonts
       inconsolata
       ubuntu_font_family
-      unifont
+      dejavu_fonts
+      noto-fonts
+      noto-fonts-emoji
       gyre-fonts
       xits-math
       lmodern
       lmmath
-      dejavu_fonts
     ];
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = ["Noto Mono"];
+        sansSerif = ["Noto Sans"];
+        serif = ["Noto Serif"];
+      };
+    };
   };
 }
