@@ -4,11 +4,11 @@
 {
   imports = [
     ./zsh
+    ./i3
     ./programs.nix
     ./fonts.nix
     ./gpyh.nix
     ./keyboard.nix
-    ./wm.nix
     ./boot.nix
     ];
 

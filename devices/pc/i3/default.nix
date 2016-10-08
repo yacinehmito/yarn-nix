@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  i3status-config = pkgs.writeText "i3status-config"
+    (builtins.readFile ./i3status.conf);
+in
 {
   environment.systemPackages = with pkgs; [
     # For i3
@@ -21,7 +25,16 @@
     enable = true;
     desktopManager.xterm.enable = false;
     displayManager.lightdm.enable = true;
-    windowManager.i3-gaps.enable = true;
+    windowManager.i3-gaps = {
+      enable = true;
+      configFile = pkgs.writeText "i3-config" (
+        (builtins.readFile ./config) +
+        "bar {
+           status_command ${pkgs.i3status}/bin/i3status -c ${i3status-config}
+         }
+        "
+      );
+    };
   };
 }
 
