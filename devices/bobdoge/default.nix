@@ -10,7 +10,7 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "usbhid" ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [ pkgs.cntouch ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1a064801-57a8-4291-b598-a0d0b120562f";

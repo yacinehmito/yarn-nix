@@ -41,6 +41,11 @@ let
   idrisPackages = import ./idris-packages (pkgs.idrisPackages.override {
     inherit idris;
   });
+
+  # CNTouch driver
+  cntouch = callPackage ./cntouch {
+    kernel = linux;
+  };
   
   # Dev stuff
   dev = {
