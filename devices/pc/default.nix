@@ -5,6 +5,7 @@
   imports = [
     ./zsh
     ./i3
+    ./hosts.nix
     ./programs.nix
     ./fonts.nix
     ./gpyh.nix
