@@ -18,6 +18,15 @@
     gnumake # Make
     file # Guess the type
 
+    # Hardware info
+    hwinfo
+    lshw
+    lsscsi
+    usbutils
+    pciutils
+    dmidecode
+    hdparm
+
     # Document authoring
     asciidoctor
 
