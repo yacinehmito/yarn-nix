@@ -73,7 +73,7 @@
 
     # Runtimes
     # idris
-    nodejs-5_x
+    nodejs-6_x
     python3
     R
   ];
