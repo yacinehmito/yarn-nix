@@ -55,4 +55,42 @@
       sha256 = "1hn30j1pw55qkf7228dxh7w1j1ywb8nhzhfw74zg2sni9rkcmycc";
     };
   };
+  intero-neovim-gpyh = vimUtils.buildVimPluginFrom2Nix {
+    name = "intero-neovim-gpyh";
+    src = fetchFromGitHub {
+      repo = "intero-neovim";
+      owner = "gpyh";
+      rev = "93b9318503dd5314dce74fcc5b83b7585eab2e5d";
+      sha256 = "1d8rxkyqg09mnk8mh943zc85jqrnzdgdvbqnzih4l5dyvzf1z96g";
+    };
+  };
+  intero-neovim = vimUtils.buildVimPluginFrom2Nix {
+    name = "intero-neovim";
+    src = fetchFromGitHub {
+      repo = "intero-neovim";
+      owner = "parsonsmatt";
+      rev = "113543022504364b0173f68b67141170c6aef0d1";
+      sha256 = "1c15cnwcpvfy94rx3vcs5n8i7pyz1rr0h0gpic9iqsgxawvw8arr";
+    };
+  };
+  ghcmod = vimUtils.buildVimPluginFrom2Nix { # created by nix#NixDerivation
+    name = "ghcmod-2016-06-19";
+    src = fetchFromGitHub {
+      repo = "ghcmod-vim";
+      owner = "eagletmt";
+      rev = "1d192d13d68ab59f9f46497a0909bf24a7b7dfff";
+      sha256 = "0bzahgzagnf0a9zv86jhdf8nc3p0yfz9izv5n3lc8gc12cp47d0a";
+    };
+    # dependencies = [ "vimproc-vim" ];
+  };
+  deoplete-nvim = vimUtils.buildVimPluginFrom2Nix { # created by nix#NixDerivation
+    name = "deoplete-nvim-2016-10-29";
+    src = fetchFromGitHub {
+      repo = "deoplete.nvim";
+      owner = "Shougo";
+      rev = "56c34002ce1dae6e66040c8d3ed7517707c90ed1";
+      sha256 = "075nzghxb274bcp67q2si1gy033vxy6165dn820pbsfd3bgpvv7j";
+    };
+    dependencies = [];
+  };
 }
