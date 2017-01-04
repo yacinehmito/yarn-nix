@@ -32,4 +32,9 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable docker
+  virtualisation.docker = {
+    enable = true;
+  };
+
 }
