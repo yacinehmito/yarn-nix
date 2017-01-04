@@ -87,9 +87,6 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 " Use // to comment in Asciidoc files
 autocmd Filetype asciidoc set commentstring=//\ %s
 
-" Run Neomake when writing file
-autocmd! BufWritePost * Neomake
-
 " Use 24-bit colorscheme
 if (has("termguicolors"))
   set termguicolors
@@ -145,6 +142,10 @@ let g:neomake_error_sign = {'text': '✖', 'texthl': 'NeomakeError'}
 let g:neomake_warning_sign = {'text': '➤', 'texthl': 'NeomakeWarning'}
 let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeInformation'}
 let g:neomake_info_sign = {'text': 'ℹ', 'texthl': 'NeomakeMessage'}
+
+" Run Neomake when writing file
+autocmd! BufWritePost * Neomake
+
 
 " Folding
 set foldmethod=indent

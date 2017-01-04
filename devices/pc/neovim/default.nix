@@ -47,12 +47,14 @@ neovim.override {
                builtins.readFile ./digraphs.vim +
     ''
       if $XDG_CONFIG_HOME == ""
-        let config = "$HOME/.config/nvim/init.vim"
+        let config = expand("$HOME/.config/nvim/init.vim")
       else
-        let config = "$XDG_CONFIG_HOME/nvim/init.vim"
+        let config = expand("$XDG_CONFIG_HOME/nvim/init.vim")
       endif
       if filereadable(config)
-        source config
+        exec "source " . config
+      else
+        echo "Could not read " . config
       endif
     '';
   };
