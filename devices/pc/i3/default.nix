@@ -25,8 +25,9 @@ in
     enable = true;
     desktopManager.xterm.enable = false;
     displayManager.lightdm.enable = true;
-    windowManager.i3-gaps = {
+    windowManager.i3 = {
       enable = true;
+      package = pkgs.i3-gaps;
       configFile = pkgs.writeText "i3-config" (
         (builtins.readFile ./config) +
         "bar {
