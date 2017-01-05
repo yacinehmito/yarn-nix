@@ -9,9 +9,13 @@
 
   networking.hostName = "nicoletta";
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "usbhid" ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot = {
+    initrd.availableKernelModules =
+      [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "usbhid" ];
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ ];
+    tmpOnTmpfs = true;
+  };
 
   environment.systemPackages = [ pkgs.ntfs3g ];
 
