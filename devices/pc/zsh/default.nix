@@ -10,6 +10,7 @@ in
   ];
 
   programs.zsh = {
+    enable = true;
     shellInit = readFile ./init.zsh;
     interactiveShellInit = lib.concatStrings [
       ''
@@ -19,6 +20,9 @@ in
         source $ZSH/oh-my-zsh.sh
       ''
       (readFile ./interactive.zsh)
+      ''
+        eval "$zshHook"
+      ''
     ];
     loginShellInit = readFile ./login.zsh;
     shellAliases = import ./aliases.nix;
@@ -26,7 +30,6 @@ in
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     enableAutosuggestions = true;
-    enable = true;
   };
   users.defaultUserShell = "/run/current-system/sw/bin/zsh";
 }
