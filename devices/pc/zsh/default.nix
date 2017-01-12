@@ -15,7 +15,6 @@ in
     interactiveShellInit = lib.concatStrings [
       ''
         export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh
-        ZSH_THEME="fishy"
         plugins=(git)
         source $ZSH/oh-my-zsh.sh
       ''
@@ -26,7 +25,7 @@ in
     ];
     loginShellInit = readFile ./login.zsh;
     shellAliases = import ./aliases.nix;
-    promptInit = ""; # Avoid conflict with oh-my-zsh
+    promptInit = readFile ./prompt.zsh;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     enableAutosuggestions = true;
