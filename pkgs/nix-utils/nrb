@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+  sudo nixos-rebuild switch
+else
+  sudo nixos-rebuild $@
+fi
+

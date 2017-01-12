@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ ! -z "$IN_NIX_SHELL" ]; then
+  echo "Already in a Nix shell. Aborting."
+else
+  nix-shell --command zsh
+fi

@@ -46,6 +46,8 @@ let
   cntouch = callPackage ./cntouch {
     kernel = linux;
   };
+
+  nix-utils = callPackage ./nix-utils { };
   
   # Dev stuff
   dev = {
