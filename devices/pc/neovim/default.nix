@@ -39,7 +39,8 @@ neovim.override {
         { name = "vim-nix"; }
         { name = "elm-vim"; }
         { name = "idris-vim"; }
-        { name = "vim-fish"; }
+        { name = "vim-javascript"; }
+        { name = "vim-jsx"; }
       ];
     };
     customRC = builtins.readFile ./init.vim +

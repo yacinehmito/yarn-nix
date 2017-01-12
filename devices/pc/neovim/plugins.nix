@@ -93,4 +93,24 @@
     };
     dependencies = [];
   };
+  vim-jsx = vimUtils.buildVimPluginFrom2Nix { # created by nix#NixDerivation
+    name = "vim-jsx-2016-08-23";
+    src = fetchFromGitHub {
+      repo = "vim-jsx";
+      owner = "mxw";
+      rev = "eb656ed96435ccf985668ebd7bb6ceb34b736213";
+      sha256 = "1ydyifnfk5jfnyi4a1yc7g3b19aqi6ajddn12gjhi8v02z30vm65";
+    };
+    dependencies = [];
+  };
+  vim-javascript = vimUtils.buildVimPluginFrom2Nix { # created by nix#NixDerivation
+    name = "vim-javascript-2017-01-12";
+    src = fetchFromGitHub {
+      repo = "vim-javascript";
+      owner = "pangloss";
+      rev = "f8e9c1a7f8b684c04aa13e9cfab3b2e7b87ac727";
+      sha256 = "1njfrzih6p26bamzbh3cr7j6lgd9bxqzymbqn2a1l9ykflhng7kb";
+    };
+    dependencies = [];
+  };
 }
