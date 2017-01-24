@@ -8,6 +8,10 @@ in
   environment.systemPackages = [
     pkgs.oh-my-zsh
   ];
+  
+  environment.sessionVariables = {
+    TERMINFO_DIRS = "/run/current-system/sw/share/terminfo";
+  };
 
   programs.zsh = {
     enable = true;
