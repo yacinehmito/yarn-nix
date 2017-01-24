@@ -113,4 +113,14 @@
     };
     dependencies = [];
   };
+  neoterm = vimUtils.buildVimPluginFrom2Nix { # created by nix#NixDerivation
+    name = "neoterm";
+    src = fetchFromGitHub {
+      repo = "neoterm";
+      owner = "kassio";
+      rev = "f94009146432d8ce8177b0ddfff7ce092fa8c8db";
+      sha256 = "0n6hmc21cjgri2h6wf0w2328hyqh32kmg8bj371v5132nx6b8qdj";
+    };
+    dependencies = [];
+  };
 }
