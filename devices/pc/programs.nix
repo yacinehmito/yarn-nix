@@ -11,7 +11,7 @@
     zip unzip
     pstree # See processes
     htop # Monitor ressources
-    silver-searcher # Search pattern in source code (ag)
+    ripgrep # Search pattern in source code (rg)
     jq # JSON processor
     go-pup # HTML processor (pup)
     ghostscript # PS/PDF processor

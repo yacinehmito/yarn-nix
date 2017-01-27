@@ -41,3 +41,16 @@ zstyle ':completion:*' cache-path $CACHEDIR
 
 # Accept autosuggestion
 bindkey '^f' autosuggest-accept
+
+function rgl {
+  rg --color=always --heading -n $@ | less -R
+}
+
+function rgf {
+  rg --files -g $@
+}
+
+function rgfl {
+  rg --color=always --heading -n --files -g $@ | less -R
+}
+
