@@ -56,7 +56,9 @@
     wget
 
     # Terminal emulation
-    (callPackage ./termite { })
+    xterm
+    alacritty
+    (callPackage ./st { })
 
     # Browsers
     firefox

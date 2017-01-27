@@ -48,6 +48,8 @@ let
   };
 
   nix-utils = callPackage ./nix-utils { };
+
+  alacritty = callPackage ./alacritty { };
   
   # Dev stuff
   dev = {
