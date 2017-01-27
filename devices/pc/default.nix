@@ -13,6 +13,18 @@
     ./boot.nix
     ];
 
+  services.ncd = {
+    enable = true;
+    domain = "ncd";
+    address = "127.0.0.1";
+  };
+
+  # networking.interfaces = {
+  #   "lo:1" = {
+  #     ip4 = [ { address = "127.0.02"; prefixLength = 32; } ];
+  #   };
+  # };
+
   # I like to live dangerously
   security.sudo.wheelNeedsPassword = false;
 
@@ -32,9 +44,9 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  # Enable docker
-  virtualisation.docker = {
-    enable = true;
-  };
+  # # Enable docker
+  # virtualisation.docker = {
+  #   enable = true;
+  # };
 
 }
