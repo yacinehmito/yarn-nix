@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   buildPhases = [ "unpackPhase" "installPhase" ];
   
   installPhase = ''
-    install -D -t $out/bin nrb nsh
+    install -D -t $out/bin nsh
   '';
 
   meta = with stdenv.lib; {
