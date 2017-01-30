@@ -4,6 +4,7 @@
 {
 
   programs.zsh.enable = true;
+  programs.st.enable = true;
 
   environment.systemPackages = with pkgs ; [
 
@@ -58,7 +59,6 @@
     # Terminal emulation
     xterm
     alacritty
-    (callPackage ./st { })
 
     # Browsers
     firefox

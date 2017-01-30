@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "monospace:pixelsize=25:antialias=true:autohint=true";
+static char font[] = FONT_TYPEFACE ":pixelsize=" FONT_SIZE ":antialias=true:autohint=true";
 static int borderpx = 2;
 #define histsize 8192
 
@@ -85,26 +85,28 @@ static unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828",
-	"#c5152f",
-	"#9faa00",
-	"#ffc24b",
-	"#73cef4",
-	"#c5158f",
-	"#335261",
-	"#999999",
-	"#666666",
-	"#f43753",
-	"#c9d05c",
-	"#ffdf5f",
-	"#b3deef",
-	"#f437a3",
-	"#44778d",
-	"#eeeeee",
-
+	COLOR_NORMAL_BLACK,
+	COLOR_NORMAL_RED,
+	COLOR_NORMAL_GREEN,
+	COLOR_NORMAL_YELLOW,
+	COLOR_NORMAL_BLUE,
+	COLOR_NORMAL_MAGENTA,
+	COLOR_NORMAL_CYAN,
+	COLOR_NORMAL_WHITE,
+	COLOR_BRIGHT_BLACK,
+	COLOR_BRIGHT_RED,
+	COLOR_BRIGHT_GREEN,
+	COLOR_BRIGHT_YELLOW,
+	COLOR_BRIGHT_BLUE,
+	COLOR_BRIGHT_MAGENTA,
+	COLOR_BRIGHT_CYAN,
+	COLOR_BRIGHT_WHITE,
 	[255] = 0,
-
 };
+
+/*
+ * FIXME: Can't put background and foreground!
+ */
 
 
 /*

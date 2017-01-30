@@ -36,6 +36,8 @@
 
   services.xserver.dpi = 221;
   fonts.fontconfig.dpi = 221;
+  programs.st.fontSize = 25;
+  theming.font.size = 8;
 
   nix.maxJobs = 4;
 }

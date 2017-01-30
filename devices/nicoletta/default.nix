@@ -53,4 +53,8 @@
   nixpkgs.config.allowUnfree = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl.driSupport32Bit = true; 
+
+  theming.font.size = 14;
+  programs.st.fontSize = 19;
+
 }
