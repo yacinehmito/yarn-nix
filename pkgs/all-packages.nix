@@ -47,8 +47,6 @@ let
     kernel = linux;
   };
 
-  nix-utils = callPackage ./nix-utils { };
-
   alacritty = callPackage ./alacritty { };
   
   eve-online = callPackage ./eve-online { };

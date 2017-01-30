@@ -16,7 +16,6 @@
     ghostscript # PS/PDF processor
     gnumake # Make
     file # Guess the type
-    nix-utils # My own nix aliases
 
     # Hardware info
     hwinfo
