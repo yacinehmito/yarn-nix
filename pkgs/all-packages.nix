@@ -51,6 +51,8 @@ let
 
   alacritty = callPackage ./alacritty { };
   
+  eve-online = callPackage ./eve-online { };
+  
   # Dev stuff
   dev = {
     # Enables the use of last OpenGL versions
