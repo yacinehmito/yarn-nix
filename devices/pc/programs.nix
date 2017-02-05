@@ -2,7 +2,6 @@
 { config, pkgs, ... }:
 
 {
-
   programs.zsh.enable = true;
   programs.st.enable = true;
 
@@ -49,6 +48,10 @@
 
     # Editors
     (callPackage ./neovim { })
+    (eclipses.eclipseWithPlugins {
+      eclipse = eclipses.eclipse-sdk-46;
+      jvmArgs = [ "-javaagent:${lombok}/share/java/lombok.jar"];
+    })
 
     # Downloads
     # transmission
@@ -78,5 +81,6 @@
     nodejs-6_x
     python3
     R
+    openjdk
   ];
 }
