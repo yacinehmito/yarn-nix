@@ -7,8 +7,6 @@
   programs.st.enable = true;
 
   environment.systemPackages = with pkgs ; [
-    eve-online
-
     # CLI utilies
     zip unzip
     pstree # See processes

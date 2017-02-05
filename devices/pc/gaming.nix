@@ -2,11 +2,13 @@
 
 {
 
-  environment.systemPackages = [ 
-    (pkgs.steam.override {
+  environment.systemPackages = with pkgs; [ 
+    (steam.override {
       newStdcpp = true;
       withJava = true;
     })
+    eve-online
+    discord
   ];
   nixpkgs.config.allowUnfree = true;
 

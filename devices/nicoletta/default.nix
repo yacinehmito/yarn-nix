@@ -4,7 +4,6 @@
   require = [ 
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ../pc
-    ./steam.nix
   ];
 
   networking.hostName = "nicoletta";
