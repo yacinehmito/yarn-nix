@@ -49,6 +49,11 @@
 
     # Editors
     (callPackage ./neovim { })
+    # (eclipses.eclipseWithPlugins)
+    (eclipses.eclipseWithPlugins {
+      eclipse = eclipses.eclipse-sdk-46;
+      jvmArgs = [ "-javaagent:${lombok}/share/java/lombok.jar"];
+    })
 
     # Downloads
     # transmission
@@ -78,5 +83,6 @@
     nodejs-6_x
     python3
     R
+    openjdk
   ];
 }
