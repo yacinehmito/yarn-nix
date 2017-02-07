@@ -3,6 +3,7 @@
 
 {
   imports = [
+    ./misc.nix
     ./zsh
     ./i3
     ./gaming.nix
