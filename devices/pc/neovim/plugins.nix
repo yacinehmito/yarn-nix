@@ -123,4 +123,14 @@
     };
     dependencies = [];
   };
+  vim-vue = vimUtils.buildVimPluginFrom2Nix { # created by nix#NixDerivation
+    name = "vim-vue";
+    src = fetchFromGitHub {
+      repo = "vim-vue";
+      owner = "posva";
+      rev = "f6694b40a7baaf72c7f3ea743f2ae2fbf39918b2";
+      sha256 = "014s8ma441zcl79b6m6b1mkvylh5mm8hd99800zyx4vih3c8iqc7";
+    };
+    dependencies = [];
+  };
 }

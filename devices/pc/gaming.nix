@@ -8,7 +8,7 @@
       withJava = true;
     })
     eve-online
-    discord
+    # discord
   ];
   nixpkgs.config.allowUnfree = true;
 

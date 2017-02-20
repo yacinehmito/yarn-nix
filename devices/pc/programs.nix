@@ -29,7 +29,7 @@
     hdparm
 
     # Document authoring
-    asciidoctor
+    # asciidoctor
 
     # Nix helpers
     nix-prefetch-scripts
@@ -50,10 +50,10 @@
     # Editors
     (callPackage ./neovim { })
     # (eclipses.eclipseWithPlugins)
-    (eclipses.eclipseWithPlugins {
-      eclipse = eclipses.eclipse-sdk-46;
-      jvmArgs = [ "-javaagent:${lombok}/share/java/lombok.jar"];
-    })
+    # (eclipses.eclipseWithPlugins {
+    #   eclipse = eclipses.eclipse-sdk-46;
+    #   jvmArgs = [ "-javaagent:${lombok}/share/java/lombok.jar"];
+    # })
 
     # Downloads
     # transmission
@@ -62,7 +62,7 @@
 
     # Terminal emulation
     xterm
-    alacritty
+    # alacritty
 
     # Browsers
     firefox

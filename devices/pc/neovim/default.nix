@@ -61,6 +61,7 @@ neovim.override {
         { name = "vim-javascript"; }
         { name = "vim-jsx"; }
         { name = "typescript-vim"; }
+        { name = "vim-vue"; }
       ];
     };
     customRC = builtins.readFile ./init.vim +
