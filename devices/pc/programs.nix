@@ -2,6 +2,9 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.permittedInsecurePackages = [
+    "webkitgtk-2.4.11"
+  ];
 
   programs.zsh.enable = true;
   programs.st.enable = true;
@@ -49,11 +52,11 @@
 
     # Editors
     (callPackage ./neovim { })
-    # (eclipses.eclipseWithPlugins)
-    # (eclipses.eclipseWithPlugins {
-    #   eclipse = eclipses.eclipse-sdk-46;
-    #   jvmArgs = [ "-javaagent:${lombok}/share/java/lombok.jar"];
-    # })
+    (eclipses.eclipseWithPlugins {
+      eclipse = eclipses.eclipse-sdk-46;
+      jvmArgs = [ "-javaagent:${lombok}/share/java/lombok.jar"];
+    })
+    vscode
 
     # Downloads
     # transmission

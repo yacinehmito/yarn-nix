@@ -55,6 +55,7 @@ neovim.override {
         { name = "delimitMate"; }
 
         # Language support
+        { name = "vim-polyglot"; }
         { name = "vim-nix"; }
         { name = "elm-vim"; }
         { name = "idris-vim"; }

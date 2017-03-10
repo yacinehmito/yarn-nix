@@ -16,11 +16,11 @@
     ./boot.nix
     ];
 
-  services.ncd = {
-    enable = true;
-    domain = "ncd";
-    address = "127.0.0.1";
-  };
+  # services.ncd = {
+  #   enable = true;
+  #   domain = "ncd";
+  #   address = "127.0.0.1";
+  # };
 
   # networking.interfaces = {
   #   "lo:1" = {

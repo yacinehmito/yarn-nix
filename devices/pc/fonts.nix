@@ -18,6 +18,7 @@
       xits-math
       lmodern
       lmmath
+      roboto
     ];
     fontconfig = {
       enable = true;
