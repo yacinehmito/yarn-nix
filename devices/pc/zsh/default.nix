@@ -31,7 +31,7 @@ in
     shellAliases = import ./aliases.nix;
     promptInit = readFile ./prompt.zsh;
     enableCompletion = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     enableAutosuggestions = true;
   };
   users.defaultUserShell = "/run/current-system/sw/bin/zsh";
