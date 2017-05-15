@@ -9,6 +9,7 @@
     # CLI utilies
     zip unzip
     pstree # See processes
+    tree # See folder tree
     htop # Monitor ressources
     ripgrep # Search pattern in source code (rg)
     jq # JSON processor
@@ -16,6 +17,7 @@
     ghostscript # PS/PDF processor
     gnumake # Make
     file # Guess the type
+    httpie # Make http requests from the command-line
 
     # Hardware info
     hwinfo
