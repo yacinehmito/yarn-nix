@@ -71,8 +71,11 @@
     # Pdf
     zathura
 
-    # IRC
+    # Communication
     weechat
+    skype
+    discord
+    slack
 
     # Graphics
     inkscape
