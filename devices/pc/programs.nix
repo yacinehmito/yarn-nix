@@ -30,6 +30,7 @@
 
     # Document authoring
     asciidoctor
+    libreoffice
 
     # Nix helpers
     nix-prefetch-scripts
