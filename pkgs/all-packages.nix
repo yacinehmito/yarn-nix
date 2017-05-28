@@ -16,13 +16,6 @@ let
     inherit (texlive) scheme-medium;
   };
   
-  # Use openjdk with JetBrains IDEs
-  idea = lib.mapAttrs
-    (name: value: value.override {
-      oraclejdk8 = openjdk8;
-    }) 
-    (pkgs.idea);
-
   # Wayland stuff
   wlc = callPackage ./wlc { };
   sway = callPackage ./sway { };
