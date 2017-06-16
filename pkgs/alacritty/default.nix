@@ -1,9 +1,8 @@
-{ stdenv, fetchFromGitHub, recurseIntoAttrs,
-  makeRustPlatform, rustNightlyBin,
+{ stdenv, fetchFromGitHub, rustPlatform,
   pkgconfig, cmake, freetype, fontconfig, xclip,
   mesa, libX11, libXcursor, libXxf86vm, libXi }:
 
-with recurseIntoAttrs (makeRustPlatform rustNightlyBin);
+with  rustPlatform;
 
 buildRustPackage rec {
   name = "alacritty-${version}";
@@ -11,10 +10,10 @@ buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "jwilm";
     repo = "alacritty";
-    rev = "08f348ecea0b782cd8539850abe6309d0e5b06c9";
-    sha256 = "0bjwb6y39721bhlgbk2hyy0hqgw8znvj4y0ms5pgsvckd7mjszi8";
+    rev = "3c8514ba103d5d987d2269c421a3cc09e6784904";
+    sha256 = "0sxpxk0lmd97fpjkmq4arnl3zca9s82irpl8wx0frkg21fca9avr";
   };
-  depsSha256 = "1362zs86cavnsrq26kdb13m0bp64dcqb1vqsfhlvh8aagqjsan4r";
+  depsSha256 = "11c1n4rd82pr409iznhh19764lx33lryz5xaw7vdp40fwp42303d";
   buildInputs = [
     pkgconfig cmake freetype fontconfig xclip
     mesa libX11 libXcursor libXxf86vm libXi
