@@ -15,12 +15,6 @@
     ./boot.nix
     ];
 
-  services.ncd = {
-    enable = true;
-    domain = "ncd";
-    address = "127.0.0.1";
-  };
-
   # networking.interfaces = {
   #   "lo:1" = {
   #     ip4 = [ { address = "127.0.02"; prefixLength = 32; } ];
