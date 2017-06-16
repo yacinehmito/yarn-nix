@@ -13,6 +13,8 @@ in
     TERMINFO_DIRS = "/run/current-system/sw/share/terminfo";
   };
 
+  programs.command-not-found.enable = true;
+
   programs.zsh = {
     enable = true;
     shellInit = readFile ./init.zsh;
